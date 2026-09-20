@@ -1,3 +1,3 @@
 # Mica Nail
 
-Site profissional com portfólio, serviços e agendamento online da Mica Nail em Braga.
+Site profissional da Mica Nail em Braga, com serviços, portfólio e agendamento online.
