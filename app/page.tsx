@@ -19,7 +19,7 @@ const durationLabel = (minutes: number) => minutes < 60 ? `${minutes} min` : min
 const minDate = () => { const date = new Date(); date.setDate(date.getDate() + 1); return date.toISOString().slice(0, 10); };
 const apiBase = "https://mica-nail-braga.rodolfo-guedes-dev.chatgpt.site";
 
-const showcaseImages = ["IMG-20260920-WA0042.jpg","IMG-20260920-WA0043.jpg","IMG-20260920-WA0044.jpg","IMG-20260920-WA0045.jpg","IMG-20260920-WA0046.jpg","IMG-20260920-WA0047.jpg","IMG-20260920-WA0048.jpg","file_00000000e31881f4a59c4b2184ba9ee2.png"];\n\nexport default function Home() {
+const showcaseImages = ["https://raw.githubusercontent.com/RodolfoGuedes/Mica-Manicure/main/IMG-20260920-WA0042.jpg","https://raw.githubusercontent.com/RodolfoGuedes/Mica-Manicure/main/IMG-20260920-WA0043.jpg","https://raw.githubusercontent.com/RodolfoGuedes/Mica-Manicure/main/IMG-20260920-WA0044.jpg","https://raw.githubusercontent.com/RodolfoGuedes/Mica-Manicure/main/IMG-20260920-WA0045.jpg","https://raw.githubusercontent.com/RodolfoGuedes/Mica-Manicure/main/IMG-20260920-WA0046.jpg","https://raw.githubusercontent.com/RodolfoGuedes/Mica-Manicure/main/IMG-20260920-WA0047.jpg","https://raw.githubusercontent.com/RodolfoGuedes/Mica-Manicure/main/IMG-20260920-WA0048.jpg","https://raw.githubusercontent.com/RodolfoGuedes/Mica-Manicure/main/file_00000000e31881f4a59c4b2184ba9ee2.png"];\n\nexport default function Home() {
   const [serviceId, setServiceId] = useState(services[0].id);
   const [date, setDate] = useState(minDate());
   const [slots, setSlots] = useState<string[]>([]);
