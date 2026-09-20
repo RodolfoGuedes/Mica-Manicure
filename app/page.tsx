@@ -54,7 +54,7 @@ export default function Home() {
 
   return <main>
     <header className="topbar">
-      <a className="brand" href="#inicio" aria-label="Mica Nail Designer — início"><img className="brand-logo" src="/logo" alt="Mica Nail Designer"/></a>
+      <a className="brand" href="#inicio" aria-label="Mica Nail Designer — início"><img className="brand-logo" src="https://raw.githubusercontent.com/RodolfoGuedes/Mica-Manicure/main/file_00000000390882469e30b6e1dbf84546.png" alt="Mica Nail Designer"/></a>
       <nav aria-label="Navegação principal"><a href="#servicos">Serviços</a><a href="#trabalhos">Trabalhos</a><a href="https://www.instagram.com/mica_manicure_braga/" target="_blank" rel="noreferrer">Instagram</a><a href="#contacto">Contacto</a></nav>
       <a className="header-cta" href="#agendar">Agendar</a>
     </header>
@@ -101,6 +101,6 @@ export default function Home() {
       </form>
     </section>
 
-    <footer id="contacto"><div><a className="brand footer-brand" href="#inicio"><img className="footer-logo" src="/logo" alt="Mica Nail Designer"/></a><p>Beleza, cuidado e atenção em cada detalhe.</p></div><div><b>Visite-nos</b><p>Rua Orfeão de Braga 4<br/>4710-411 São Vítor, Braga</p></div><div><b>Fale connosco</b><a href="https://wa.me/351964536960"><MessageCircle/> +351 964 536 960</a><a href="mailto:micleiasilva.mica@gmail.com">micleiasilva.mica@gmail.com</a><a href="https://www.instagram.com/mica_manicure_braga/" target="_blank" rel="noreferrer"><Camera/> @mica_manicure_braga</a></div></footer>
+    <footer id="contacto"><div><a className="brand footer-brand" href="#inicio"><img className="footer-logo" src="https://raw.githubusercontent.com/RodolfoGuedes/Mica-Manicure/main/file_00000000390882469e30b6e1dbf84546.png" alt="Mica Nail Designer"/></a><p>Beleza, cuidado e atenção em cada detalhe.</p></div><div><b>Visite-nos</b><p>Rua Orfeão de Braga 4<br/>4710-411 São Vítor, Braga</p></div><div><b>Fale connosco</b><a href="https://wa.me/351964536960"><MessageCircle/> +351 964 536 960</a><a href="mailto:micleiasilva.mica@gmail.com">micleiasilva.mica@gmail.com</a><a href="https://www.instagram.com/mica_manicure_braga/" target="_blank" rel="noreferrer"><Camera/> @mica_manicure_braga</a></div></footer>
   </main>;
 }
