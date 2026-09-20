@@ -29,6 +29,7 @@ export default function Home() {
   const [loadingSlots, setLoadingSlots] = useState(false);
   const [status, setStatus] = useState<"idle" | "saving" | "success" | "error">("idle");
   const [reference, setReference] = useState("");
+  const [showcaseIndex, setShowcaseIndex] = useState<number>(0);
   const service = useMemo(() => services.find((item) => item.id === serviceId)!, [serviceId]);
 
   useEffect(() => { const timer = window.setInterval(() => setShowcaseIndex((i) => (i + 1) % showcaseImages.length), 3500); return () => window.clearInterval(timer); }, []);
