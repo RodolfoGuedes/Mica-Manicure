@@ -19,7 +19,7 @@ const durationLabel = (minutes: number) => minutes < 60 ? `${minutes} min` : min
 const minDate = () => { const date = new Date(); date.setDate(date.getDate() + 1); return date.toISOString().slice(0, 10); };
 const apiBase = "https://mica-nail-braga.rodolfo-guedes-dev.chatgpt.site";
 
-export default function Home() {
+const showcaseImages = ["IMG-20260920-WA0042.jpg","IMG-20260920-WA0043.jpg","IMG-20260920-WA0044.jpg","IMG-20260920-WA0045.jpg","IMG-20260920-WA0046.jpg","IMG-20260920-WA0047.jpg","IMG-20260920-WA0048.jpg","file_00000000e31881f4a59c4b2184ba9ee2.png"];\n\nexport default function Home() {
   const [serviceId, setServiceId] = useState(services[0].id);
   const [date, setDate] = useState(minDate());
   const [slots, setSlots] = useState<string[]>([]);
@@ -29,7 +29,7 @@ export default function Home() {
   const [reference, setReference] = useState("");
   const service = useMemo(() => services.find((item) => item.id === serviceId)!, [serviceId]);
 
-  useEffect(() => {
+  useEffect(() => { const timer = window.setInterval(() => setShowcaseIndex((i) => (i + 1) % showcaseImages.length), 3500); return () => window.clearInterval(timer); }, []);\n\n  useEffect(() => {
     const controller = new AbortController();
     setLoadingSlots(true); setSlot("");
     fetch(`${apiBase}/api/availability?date=${date}&service=${serviceId}`, { signal: controller.signal })
@@ -80,7 +80,7 @@ export default function Home() {
 
     <section id="trabalhos" className="portfolio section">
 <div className="portfolio-copy"><p className="eyebrow">Portfólio</p><h2>Detalhes que fazem a diferença</h2><p>Do clássico às cores mais marcantes, cada trabalho é pensado para combinar consigo.</p><a href="https://www.instagram.com/mica_manicure_braga/" target="_blank" rel="noreferrer"><Camera/> Ver mais no Instagram</a></div>
-      <div className="portfolio-images"><img src="/portfolio-2.jpg" alt="Galeria de manicures da Mica Nail"/><img src="/portfolio-3.jpg" alt="Unhas em gel e nail art da Mica Nail"/></div>
+      <div className="showcase-carousel"><img src={`/${showcaseImages[showcaseIndex]}`} alt="Trabalho realizado pela Mica Nail Designer"/><div className="showcase-dots">{showcaseImages.map((_, i) => <button key={i} aria-label={`Ver trabalho ${i + 1}`} className={i === showcaseIndex ? "active" : ""} onClick={() => setShowcaseIndex(i)} />)}</div></div>
     </section>
 
     <section id="agendar" className="booking-section">
