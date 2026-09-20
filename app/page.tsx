@@ -54,13 +54,13 @@ export default function Home() {
 
   return <main>
     <header className="topbar">
-      <a className="brand" href="#inicio" aria-label="Mica Nail Designer — início"><img className="brand-logo" src="/mica-logo.png" alt="Mica Nail Designer"/></a>
+      <a className="brand brand-text" href="#inicio" aria-label="Mica Nail Designer — início"><span>Mica</span><small>Nail Designer</small></a>
       <nav aria-label="Navegação principal"><a href="#servicos">Serviços</a><a href="#trabalhos">Trabalhos</a><a href="https://www.instagram.com/mica_manicure_braga/" target="_blank" rel="noreferrer">Instagram</a><a href="#contacto">Contacto</a></nav>
       <a className="header-cta" href="#agendar">Agendar</a>
     </header>
 
     <section id="inicio" className="hero">
-      <div className="hero-copy">
+      <div className="hero-copy">\n        <img className="hero-logo" src="/mica-logo.png" alt="Mica Nail Designer"/>
         <p className="eyebrow"><Sparkles size={15}/> Nail designer em Braga</p>
         <h1>Mais que unhas,<br/><em>é autoestima.</em></h1>
         <p className="hero-text">Cuidados, elegância e qualidade para realçar a sua beleza em cada detalhe.</p>
