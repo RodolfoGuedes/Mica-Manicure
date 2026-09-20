@@ -110,3 +110,4 @@ export default function Home() {
     <footer id="contacto"><div><a className="brand footer-brand" href="#inicio"><img className="footer-logo" src="https://raw.githubusercontent.com/RodolfoGuedes/Mica-Manicure/main/file_0000000012c881f4820b91e8a6578cb5.png" alt="Mica Nail Designer"/></a><p>Beleza, cuidado e atenção em cada detalhe.</p></div><div><b>Visite-nos</b><p>Rua Orfeão de Braga 4<br/>4710-411 São Vítor, Braga</p></div><div><b>Fale connosco</b><a href="https://wa.me/351964536960"><MessageCircle/> +351 964 536 960</a><a href="mailto:micleiasilva.mica@gmail.com">micleiasilva.mica@gmail.com</a><a href="https://www.instagram.com/mica_manicure_braga/" target="_blank" rel="noreferrer"><Camera/> @mica_manicure_braga</a></div></footer>
   </main>;
 }
+
