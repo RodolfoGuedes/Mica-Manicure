@@ -54,7 +54,7 @@ export default function Home() {
 
   return <main>
     <header className="topbar">
-      <a className="brand" href="#inicio" aria-label="Mica Nail — início"><span>MN</span>Mica Nail</a>
+      <a className="brand" href="#inicio" aria-label="Mica Nail Designer — início"><img className="brand-logo" src="/mica-logo.png" alt="Mica Nail Designer"/></a>
       <nav aria-label="Navegação principal"><a href="#servicos">Serviços</a><a href="#trabalhos">Trabalhos</a><a href="https://www.instagram.com/mica_manicure_braga/" target="_blank" rel="noreferrer">Instagram</a><a href="#contacto">Contacto</a></nav>
       <a className="header-cta" href="#agendar">Agendar</a>
     </header>
@@ -62,8 +62,8 @@ export default function Home() {
     <section id="inicio" className="hero">
       <div className="hero-copy">
         <p className="eyebrow"><Sparkles size={15}/> Nail designer em Braga</p>
-        <h1>O seu momento.<br/><em>As suas unhas.</em></h1>
-        <p className="hero-text">Escolha o cuidado ideal, veja os horários disponíveis e marque em poucos minutos.</p>
+        <h1>Mais que unhas,<br/><em>é autoestima.</em></h1>
+        <p className="hero-text">Cuidados, elegância e qualidade para realçar a sua beleza em cada detalhe.</p>
         <div className="hero-actions"><a className="primary-link" href="#agendar">Marcar agora</a><a className="instagram-link" href="https://www.instagram.com/mica_manicure_braga/" target="_blank" rel="noreferrer"><Camera/> Instagram</a></div>
         <div className="trust-row"><span><Check/> Confirmação imediata</span><span><Check/> Pagamento no local</span></div>
       </div>
@@ -101,6 +101,6 @@ export default function Home() {
       </form>
     </section>
 
-    <footer id="contacto"><div><a className="brand footer-brand" href="#inicio"><span>MN</span>Mica Nail</a><p>Beleza, cuidado e atenção em cada detalhe.</p></div><div><b>Visite-nos</b><p>Rua Orfeão de Braga 4<br/>4710-411 São Vítor, Braga</p></div><div><b>Fale connosco</b><a href="https://wa.me/351964536960"><MessageCircle/> +351 964 536 960</a><a href="mailto:micleiasilva.mica@gmail.com">micleiasilva.mica@gmail.com</a><a href="https://www.instagram.com/mica_manicure_braga/" target="_blank" rel="noreferrer"><Camera/> @mica_manicure_braga</a></div></footer>
+    <footer id="contacto"><div><a className="brand footer-brand" href="#inicio"><img className="footer-logo" src="/mica-logo.png" alt="Mica Nail Designer"/></a><p>Beleza, cuidado e atenção em cada detalhe.</p></div><div><b>Visite-nos</b><p>Rua Orfeão de Braga 4<br/>4710-411 São Vítor, Braga</p></div><div><b>Fale connosco</b><a href="https://wa.me/351964536960"><MessageCircle/> +351 964 536 960</a><a href="mailto:micleiasilva.mica@gmail.com">micleiasilva.mica@gmail.com</a><a href="https://www.instagram.com/mica_manicure_braga/" target="_blank" rel="noreferrer"><Camera/> @mica_manicure_braga</a></div></footer>
   </main>;
 }
