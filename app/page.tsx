@@ -80,7 +80,7 @@ const showcaseImages = ["https://raw.githubusercontent.com/RodolfoGuedes/Mica-Ma
 
     <section id="trabalhos" className="portfolio section">
 <div className="portfolio-copy"><p className="eyebrow">Portfólio</p><h2>Detalhes que fazem a diferença</h2><p>Do clássico às cores mais marcantes, cada trabalho é pensado para combinar consigo.</p><a href="https://www.instagram.com/mica_manicure_braga/" target="_blank" rel="noreferrer"><Camera/> Ver mais no Instagram</a></div>
-      <div className="showcase-carousel"><img src={`/${showcaseImages[showcaseIndex]}`} alt="Trabalho realizado pela Mica Nail Designer"/><div className="showcase-dots">{showcaseImages.map((_, i) => <button key={i} aria-label={`Ver trabalho ${i + 1}`} className={i === showcaseIndex ? "active" : ""} onClick={() => setShowcaseIndex(i)} />)}</div></div>
+      <div className="showcase-carousel"><img src={showcaseImages[showcaseIndex]} alt="Trabalho realizado pela Mica Nail Designer"/><div className="showcase-dots">{showcaseImages.map((_, i) => <button key={i} aria-label={`Ver trabalho ${i + 1}`} className={i === showcaseIndex ? "active" : ""} onClick={() => setShowcaseIndex(i)} />)}</div></div>
     </section>
 
     <section id="agendar" className="booking-section">
