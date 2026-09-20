@@ -19,7 +19,9 @@ const durationLabel = (minutes: number) => minutes < 60 ? `${minutes} min` : min
 const minDate = () => { const date = new Date(); date.setDate(date.getDate() + 1); return date.toISOString().slice(0, 10); };
 const apiBase = "https://mica-nail-braga.rodolfo-guedes-dev.chatgpt.site";
 
-const showcaseImages = ["https://raw.githubusercontent.com/RodolfoGuedes/Mica-Manicure/main/IMG-20260920-WA0042.jpg","https://raw.githubusercontent.com/RodolfoGuedes/Mica-Manicure/main/IMG-20260920-WA0043.jpg","https://raw.githubusercontent.com/RodolfoGuedes/Mica-Manicure/main/IMG-20260920-WA0044.jpg","https://raw.githubusercontent.com/RodolfoGuedes/Mica-Manicure/main/IMG-20260920-WA0045.jpg","https://raw.githubusercontent.com/RodolfoGuedes/Mica-Manicure/main/IMG-20260920-WA0046.jpg","https://raw.githubusercontent.com/RodolfoGuedes/Mica-Manicure/main/IMG-20260920-WA0047.jpg","https://raw.githubusercontent.com/RodolfoGuedes/Mica-Manicure/main/IMG-20260920-WA0048.jpg","https://raw.githubusercontent.com/RodolfoGuedes/Mica-Manicure/main/file_00000000e31881f4a59c4b2184ba9ee2.png"];\n\nexport default function Home() {
+const showcaseImages = ["https://raw.githubusercontent.com/RodolfoGuedes/Mica-Manicure/main/IMG-20260920-WA0042.jpg","https://raw.githubusercontent.com/RodolfoGuedes/Mica-Manicure/main/IMG-20260920-WA0043.jpg","https://raw.githubusercontent.com/RodolfoGuedes/Mica-Manicure/main/IMG-20260920-WA0044.jpg","https://raw.githubusercontent.com/RodolfoGuedes/Mica-Manicure/main/IMG-20260920-WA0045.jpg","https://raw.githubusercontent.com/RodolfoGuedes/Mica-Manicure/main/IMG-20260920-WA0046.jpg","https://raw.githubusercontent.com/RodolfoGuedes/Mica-Manicure/main/IMG-20260920-WA0047.jpg","https://raw.githubusercontent.com/RodolfoGuedes/Mica-Manicure/main/IMG-20260920-WA0048.jpg","https://raw.githubusercontent.com/RodolfoGuedes/Mica-Manicure/main/file_00000000e31881f4a59c4b2184ba9ee2.png"];
+
+export default function Home() {
   const [serviceId, setServiceId] = useState(services[0].id);
   const [date, setDate] = useState(minDate());
   const [slots, setSlots] = useState<string[]>([]);
@@ -29,7 +31,9 @@ const showcaseImages = ["https://raw.githubusercontent.com/RodolfoGuedes/Mica-Ma
   const [reference, setReference] = useState("");
   const service = useMemo(() => services.find((item) => item.id === serviceId)!, [serviceId]);
 
-  useEffect(() => { const timer = window.setInterval(() => setShowcaseIndex((i) => (i + 1) % showcaseImages.length), 3500); return () => window.clearInterval(timer); }, []);\n\n  useEffect(() => {
+  useEffect(() => { const timer = window.setInterval(() => setShowcaseIndex((i) => (i + 1) % showcaseImages.length), 3500); return () => window.clearInterval(timer); }, []);
+
+  useEffect(() => {
     const controller = new AbortController();
     setLoadingSlots(true); setSlot("");
     fetch(`${apiBase}/api/availability?date=${date}&service=${serviceId}`, { signal: controller.signal })
@@ -60,7 +64,8 @@ const showcaseImages = ["https://raw.githubusercontent.com/RodolfoGuedes/Mica-Ma
     </header>
 
     <section id="inicio" className="hero">
-      <div className="hero-copy">\n        <img className="hero-logo" src="https://raw.githubusercontent.com/RodolfoGuedes/Mica-Manicure/main/file_0000000012c881f4820b91e8a6578cb5.png" alt="Mica Nail Designer"/>
+      <div className="hero-copy">
+        <img className="hero-logo" src="https://raw.githubusercontent.com/RodolfoGuedes/Mica-Manicure/main/file_0000000012c881f4820b91e8a6578cb5.png" alt="Mica Nail Designer"/>
         <p className="eyebrow"><Sparkles size={15}/> Nail designer em Braga</p>
         <h1>Mais que unhas,<br/><em>é autoestima.</em></h1>
         <p className="hero-text">Cuidados, elegância e qualidade para realçar a sua beleza em cada detalhe.</p>
