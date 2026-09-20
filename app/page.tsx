@@ -73,7 +73,7 @@ export default function Home() {
         <div className="hero-actions"><a className="primary-link" href="#agendar">Marcar agora</a><a className="instagram-link" href="https://www.instagram.com/mica_manicure_braga/" target="_blank" rel="noreferrer"><Camera/> Instagram</a></div>
         <div className="trust-row"><span><Check/> Confirmação imediata</span><span><Check/> Pagamento no local</span></div>
       </div>
-      <div className="hero-gallery"><img className="gallery-main" src="/portfolio-1.jpg" alt="Portfólio de unhas realizadas pela Mica Nail"/><div className="gallery-note"><span>+300</span> trabalhos partilhados</div></div>
+      <div className="hero-gallery hero-carousel"><img className="gallery-main" src={showcaseImages[showcaseIndex]} alt="Trabalho realizado pela Mica Nail Designer"/><div className="showcase-dots hero-dots">{showcaseImages.map((_, i) => <button key={i} aria-label={`Ver trabalho ${i + 1}`} className={i === showcaseIndex ? "active" : ""} onClick={() => setShowcaseIndex(i)} />)}</div></div>
     </section>
 
     <section id="servicos" className="section services-section">
